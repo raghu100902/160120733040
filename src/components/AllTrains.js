@@ -52,14 +52,14 @@ const AllTrainsPage = () => {
       flexDirection: 'column', 
       alignItems: 'center', 
       padding: '20px',
-      background: 'linear-gradient(to bottom, #f3f3f3, #e5e5e5)', 
+      background: 'linear-gradient(to bottom, #e3f0fd, #d0e8f9)', 
       borderRadius: '8px', 
       boxShadow: '0 2px 6px rgba(0, 0, 0, 0.2)',
       maxWidth: '800px', 
       margin: '0 auto' 
     }}>
       <div style={{ 
-        background: 'linear-gradient(to right, #65c8d0, #6cd6e6)',
+        background: 'linear-gradient(to right, #3498db, #2980b9)',
         padding: '10px',
         borderRadius: '8px 8px 0 0',
         width: '100%',
@@ -71,7 +71,7 @@ const AllTrainsPage = () => {
           margin: '0', 
           color: '#fff', 
           textShadow: '2px 2px 4px rgba(0, 0, 0, 0.3)',
-        }}>Trains Schedule</h1>
+        }}>Train Schedule</h1>
       </div>
       <table style={{ 
         width: '100%', 
@@ -92,7 +92,7 @@ const AllTrainsPage = () => {
         <tbody>
           {trains.map((train) => (
             <tr key={train.id} style={{ 
-              background: '#f2f2f2',
+              background: '#fff',
             }}>
               <td style={{ border: '1px solid #ccc', padding: '10px', textAlign: 'center' }}>{train.trainName}</td>
               <td style={{ border: '1px solid #ccc', padding: '10px', textAlign: 'center' }}>${train.price}</td>
@@ -102,6 +102,20 @@ const AllTrainsPage = () => {
           ))}
         </tbody>
       </table>
+      <button 
+        style={{
+          padding: '10px 20px',
+          fontSize: '16px',
+          backgroundColor: '#3498db',
+          color: '#fff',
+          border: 'none',
+          borderRadius: '4px',
+          cursor: 'pointer',
+        }}
+        onClick={sortTrains}
+      >
+        Sort Trains
+      </button>
     </div>
   );
 };
